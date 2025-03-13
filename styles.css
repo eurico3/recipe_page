@@ -1,0 +1,226 @@
+:root {
+    /*Color Variables */
+    --rose-800: #7A284E;  
+    --rose-50: #FFF7FB;  
+    --stone-900:#312E2C;  
+    --stone-600: #5F564D;  
+    --stone-150: #E3DDD7;
+    --stone-100: #F3E5D7;
+    --brown-800: #854632;
+    --white : #FFFFFF;   
+
+    /* Text Presets with Responsive Font Sizes */
+    --text-preset-1: 400 clamp(28px, 5vw, 40px)/1 "YoungSerif", sans-serif;
+    --text-preset-2: 400 clamp(20px, 4vw, 28px)/1 "YoungSerif", sans-serif;
+    --text-preset-3: 600 clamp(16px, 3vw, 20px)/1 "Outfit", sans-serif;
+    --text-preset-4: 400 clamp(14px, 2.5vw, 16px)/1.5 "Outfit", sans-serif;
+    --text-preset-4-bold: 700 clamp(14px, 2.5vw, 16px)/1.5 "Outfit", sans-serif;
+}
+
+/* 🛠 Fix: Removed comma escape issue */
+@font-face {
+    font-family: 'Outfit';
+    src: url('assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'YoungSerif';
+    src: url('assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--stone-100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Fix: Ensures full-page centering */
+    margin: 0;
+}
+
+/* Card Container */
+.card {
+    max-width: 736px;
+    margin: 128px 0px 128px 0px; /* top right bottom left */
+    padding: 40px;
+    background-color: var(--white);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+/* Recipe Image */
+.card-img {
+    width: 100%;
+    border-radius: 12px;
+    
+}
+
+
+/* Recipe Title  */
+.card .recipe-title {
+    font: var(--text-preset-1);
+    color: var(--stone-900);
+    margin: 40px 0px 0px 0px; /* top right bottom left */
+    
+    
+}
+
+/* Recipe Description  */
+.card .recipe-description {
+    font: var(--text-preset-4);
+    color: var(--stone-900);
+    margin: 24px 0px 0px 0px; /* top right bottom left */
+    
+}
+
+
+/* Preparation Time */
+.card .preparation-time {
+    font: var(--text-preset-3);
+    color: var(--rose-800);
+    margin: 56px 0px 0px 24px; /* top right bottom left */
+    
+}
+
+/* Recipe Preparation Time Description */
+.card .preparation-time-description {
+    font: var(--text-preset-4);
+    color: var(--stone-600);
+    margin: 0px 0px 0px 0px; /* top right bottom left */
+    
+}
+
+/* Ingredients Title */
+.card  .ingredients-title{
+    font: var(--text-preset-2);
+    color: var(--brown-800);
+    margin: 32px 0px 24px 0px; /* top right bottom left */
+    
+}
+
+/* Ingredients Description */
+.card .ingredients-description{
+    font: var(--text-preset-4);
+    color: var(--stone-600);
+    
+}
+
+/* Instruction Title */
+.card .instructions-title{
+    font: var(--text-preset-2);
+    color: var(--brown-800);
+    margin: 32px 0px 24px 0px; /* top right bottom left */
+    
+}
+
+/* Instructions Description */
+.card .instructions-description{
+    font: var(--text-preset-4);
+    color: var(--stone-600);
+    
+}
+
+/* Nutrition Title */
+.card .nutrition-title{
+    font: var(--text-preset-2);
+    color: var(--brown-800);
+    margin: 32px 0px 24px 0px; /* top right bottom left */
+    
+}
+
+/* Nutrition Description */
+.card .nutrition-description{
+    font: var(--text-preset-4);
+    color: var(--stone-600);
+    
+    
+}
+
+/* Container for the table */
+.flex-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Full width */
+    margin: 16px 0px 0px 0px; /* top right bottom left */
+}
+
+/* Each row */
+.flex-row {
+    display: flex;
+    width: 100%; /* Make rows full width */
+}
+
+/* Each cell */
+.flex-item {
+    font: var(--text-preset-4);
+    color: var(--stone-600);
+    margin: 16px 0px 16px 32px; /* top right bottom left */
+    flex: 1; /* Each column takes equal space */
+    padding: 0px;
+    text-align: left; /* Align text to the left */
+    display: flex;
+    align-items: center; /* Vertical centering */
+    border: 1px solid #ffffff; /* Optional: Add border for visibility */
+    background-color: #ffffff; /* Light background */
+}
+
+/* Each cell */
+.flex-item2 {
+    font: var(--text-preset-4-bold);
+    color: var(--brown-800);
+    flex: 1; /* Each column takes equal space */
+    margin: 0px 0px 0px 16px; /* top right bottom left */
+    padding: 0px;
+    text-align: left; /* Align text to the left */
+    display: flex;
+    align-items: center; /* Vertical centering */
+    border: 1px solid #ffffff; /* Optional: Add border for visibility */
+    background-color: #ffffff; /* Light background */
+}
+
+hr {
+    border: none;        /* Removes default border */
+    height: 1px;         /* Line thickness */
+    background-color: var(--stone-150); /* Line color */
+    width: 100%;          /* Line width */
+    margin: 0px;   /* Centers it */
+}
+
+.card .preparation-time-description li::marker {
+    color: var(--rose-800); /* Change bullet color */
+    
+    
+}
+
+.card .ingredients-description li::marker {
+    color: var(--brown-800); /* Change bullet color */
+    font-size: 18px; /* Make bullets larger */
+}
+
+
+.card .instructions-description li::marker {
+    color: var(--brown-800); /* Change bullet color */
+    font-size: 18px; /* Make bullets larger */
+    font-weight: bold; /* Make the bullet bold */
+}
+
+/* Add space between bullet and text */
+.card .instructions-description li {
+    padding-left: 16px; /* Adjust spacing */
+}
+
+/* Add space between bullet and text */
+.card .ingredients-description li {
+    padding-left: 16px; /* Adjust spacing */
+}
+
+/* Add space between bullet and text */
+.card .preparation-time-description li {
+    padding-left: 16px; /* Adjust spacing */
+}
