@@ -1,6 +1,7 @@
 :root {
     /*Color Variables */
-    --rose-800: #7A284E;  
+    --rose-800: #7A284E;
+    --rose-50: #FFF7FB;   
     --rose-50: #FFF7FB;  
     --stone-900:#312E2C;  
     --stone-600: #5F564D;  
@@ -75,17 +76,31 @@ body {
 .card .recipe-description {
     font: var(--text-preset-4);
     color: var(--stone-900);
-    margin: 24px 0px 0px 0px; /* top right bottom left */
+    margin: 24px 0px 24px 0px; /* top right bottom left */
     
     
 }
 
+/* Preparation Card */
+.card .preparation-card {
+
+    background-color: var(--rose-50) !important;
+    width: 100%;
+    border-radius: 12px;
+    
+
+
+    
+}
 
 /* Preparation Time */
 .card .preparation-time {
     font: var(--text-preset-3);
     color: var(--rose-800);
-    margin: 56px 0px 0px 24px; /* top right bottom left */
+    margin: 24px 0px 0px 0px; /* top right bottom left */
+   
+    width: 100%;
+    padding-left: 0px;
     
 }
 
@@ -94,6 +109,8 @@ body {
     font: var(--text-preset-4);
     color: var(--stone-600);
     margin: 0px 0px 0px 0px; /* top right bottom left */
+    
+    width: 100%;
     
     
 }
